@@ -32,9 +32,11 @@ divSchemes
         RK_ButcherCoeffs 3 3((1 0 0)
                              (0.25 0.250 0)
                              (0.16667 0.16667 0.66666));
-        alpha 0.75;
-        beta 0.75;
-        gamma 0.8;
+        //alpha 0.75;
+        //beta 0.75;
+        //gamma 0.8;
+        gammaScale 6.5;
+        gamma1cMax 2.5;
         correctionScheme cubicUpwind;
     };
 }
