@@ -14,8 +14,22 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-#includeFunc massTransport(rho, phi=phiv, diffusivity=none, executeAtStart=no)
-#includeFunc scalarTransport(T, diffusivity=none, executeAtStart=no)
+// #includeFunc massTransport(rho, advectingFlux=phiv, scalarFlux=phi,
+//                            executeAtStart=yes, diffusivity=none)
+// #includeFunc massTransport(T, density=rho, advectingFlux=phi, diffusivity=none,
+//                            executeAtStart=no)
+#includeFunc multiScalarRKTransport
+(
+    nFields=2,
+    fields=(rho T),
+    advectingFlux=phiv,
+    massFlux=phi,
+    RK_ButcherCoeffs=3 3((1 0 0)
+                        (0.25 0.250 0)
+                        (0.16667 0.16667 0.66666)),
+    gammaCoeffs=(2.5 6.5),
+    correctionScheme=cubicUpwind
+)
 
 minMax
 {

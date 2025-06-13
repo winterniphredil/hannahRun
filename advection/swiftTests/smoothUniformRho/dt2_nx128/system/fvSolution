@@ -14,8 +14,8 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-withDensity true;
-tracerNames 2("rho" "T");
+//withDensity true;
+//tracerNames 2("rho" "T");
 
 solvers
 {
