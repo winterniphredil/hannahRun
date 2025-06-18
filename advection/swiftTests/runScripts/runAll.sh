@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+# Test cases described in Bendall and Kent 2024 (SWIFT)
+
 # u=10, L=1000, c = 2u dt/dx = 2u dt nx/L = dt nx 2/100
 
 # Check for consistency (T==1 or uniT) yes
@@ -17,39 +19,44 @@
 # For c~1.6, noDensity is better than 2nd order. withDensity is same order
 # noDensity c2p6 1st order (alpha=0.609375, gamma=0.990854). Same as withDensit
 
-pset0="noDensity c05 0.8 32"
-pset1="noDensity c05 0.4 64"
-pset2="noDensity c05 0.2 128"
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+source $SCRIPT_DIR/runScripts.sh
 
-pset0="noDensity c2p6 4 32"
-pset1="noDensity c2p6 2 64"
-pset2="noDensity c2p6 1 128"
+# Convergence runs (with density)
+initRunPost smoothUniformDensity/c05/nx032  smooth uniform withDensity 0.8 32 noPlot 0
+initRunPost smoothUniformDensity/c05/nx064  smooth uniform withDensity 0.4 64 noPlot 0
+initRunPost smoothUniformDensity/c05/nx128 smooth uniform withDensity 0.2 128 noPlot 0
 
-pset0="withDensity c05 0.8 32"
-pset1="withDensity c05 0.4 64"
-pset2="withDensity c05 0.2 128"
+initRunPost smoothUniformDensity/c1p6/nx032 smooth uniform withDensity 2.5 32 noPlot 0
+initRunPost smoothUniformDensity/c1p6/nx064 smooth uniform withDensity 1.25 64 noPlot 0
+initRunPost smoothUniformDensity/c1p6/nx128 smooth uniform withDensity 0.625 128 noPlot 0
 
-pset0="withDensity c1p6 2.5 32"
-pset1="withDensity c1p6 1.25 64"
-pset2="withDensity c1p6 0.625 128"
+initRunPost smoothUniformDensity/c2/nx025   smooth uniform withDensity 4 25 noPlot 0
+initRunPost smoothUniformDensity/c2/nx050   smooth uniform withDensity 2 50 noPlot 0
+initRunPost smoothUniformDensity/c2/nx100   smooth uniform withDensity 1 100 noPlot 0
 
-pset0="withDensity c2p6 4 32"
-pset1="withDensity c2p6 2 64"
-pset2="withDensity c2p6 1 128"
+initRunPost smoothUniformDensity/c2p1/nx026   smooth uniform withDensity 4 26 noPlot 0
+initRunPost smoothUniformDensity/c2p1/nx052   smooth uniform withDensity 2 52 noPlot 0
+initRunPost smoothUniformDensity/c2p1/nx104   smooth uniform withDensity 1 104 noPlot 0
 
-for p in "${pset0}" "${pset1}" "${pset2}"; do
-    p=($p)
-    dens=${p[0]}
-    c=${p[1]}
-    dt=${p[2]}
-    nx=${p[3]}
-    case=smoothUniform${dens}/$c/nx${nx}
-    echo $case
-    rm -rf $case
-    ./runScripts/initOne.sh $case smooth uniform $dens $dt $nx
-    ./runScripts/runOne.sh $case
-    ./runScripts/postOne.sh $case
-done
+initRunPost smoothUniformDensity/c2p6/nx032 smooth uniform withDensity 4 32 noPlot 0
+initRunPost smoothUniformDensity/c2p6/nx064 smooth uniform withDensity 2 64 noPlot 0
+initRunPost smoothUniformDensity/c2p6/nx128 smooth uniform withDensity 1 128 noPlot 0
+
+initRunPost smoothUniformDensity/c5p1/nx026 smooth uniform withDensity 10 26 noPlot 0
+initRunPost smoothUniformDensity/c5p1/nx064 smooth uniform withDensity 4 64 noPlot 0
+initRunPost smoothUniformDensity/c5p1/nx128 smooth uniform withDensity 2 128 noPlot 0
+
+initRunPost smoothUniformDensity/c10/nx050 smooth uniform withDensity 10 50 noPlot 0
+initRunPost smoothUniformDensity/c10/nx100 smooth uniform withDensity 5 100 noPlot 0
+initRunPost smoothUniformDensity/c10/nx200 smooth uniform withDensity 4 200 noPlot 0
 
 # convergence plot
-./runScripts/plotErrorNorms.sh
+./runScripts/plotErrorNorms.sh rho
+
+# Slotted cylinder cases
+initRunPost slottedUniform_noDensity/c05/nx032 slotted uniform noDensity 0.8 32 plot 0
+initRunPost slottedUniform_noDensity/c05/nx064 slotted uniform noDensity 0.4 64 plot 0
+initRunPost slottedUniform_noDensity/c05/nx128 slotted uniform noDensity 0.2 128 plot 0
+initRunPost slottedUniform_density/c05/nx128 slotted uniform withDensity 0.2 128 plot 0
+initRunPost slottedUniform_noDensityFCT/c05/nx128 slotted uniform noDensity 0.2 128 plot 1

@@ -18,6 +18,7 @@ FoamFile
 (
     nFields=1,
     fields=(T),
+    FCTiters=(NFCT),
     advectingFlux=phi,
     massFlux=none,
     RK_ButcherCoeffs=3 3((1 0 0)
