@@ -7,7 +7,7 @@ export SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" \
 function initOne {
     if [ "$#" -ne 10 ]; then
         echo usage: initOne case smooth\|slotted uniform\|deforming\|divergent \
-                            withDensity\|noDensity dt nx plot|noPlot nFCT \
+                            withDensity\|noDensity dt nx plot\|noPlot nFCT \
                             CCRIT CGRAD
         return 0
     fi
