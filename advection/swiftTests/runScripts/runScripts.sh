@@ -5,25 +5,24 @@ export SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" \
 
 # Function to initialise a case
 function initOne {
-    if [ "$#" -ne 12 ]; then
-        echo usage: initOne case smooth\|slotted uniform\|deforming\|divergent \
-                            withDensity\|noDensity\|uniDensity dt nx \
-                            plot\|noPlot nFCT CCRIT CGRAD CORRSCHEME RK3\|RK4
+    if [ "$#" -ne 10 ]; then
+        echo usage: initOne case dt nx \
+                            smooth\|slotted uniform\|deforming\|divergent \
+                            withDensity\|noDensity\|uniDensity  \
+                            CORRSCHEME RK3\|RK4 nFCT plot\|noPlot
         return 0
     fi
 
     case=$1
-    tracerType=$2
-    velocityType=$3
-    density=$4
-    dt=$5
-    nx=$6
-    plot=$7
-    nFCT=$8
-    cCrit=$9
-    cGrad=${10}
-    corrScheme=${11}
-    RK=${12}
+    dt=$2
+    nx=$3
+    tracerType=$4
+    velocityType=$5
+    density=$6
+    corrScheme=$7
+    RK=$8
+    nFCT=$9
+    plot=${10}
     
     if [[ $RK == RK3 ]]; then
         RK='3 3((1 0 0)\n                        (0.25 0.25 0)                        (0.16666666667 0.16666666667 0.66666666666))'
@@ -51,8 +50,7 @@ function initOne {
         if [[ $density == noDensity ]]; then
             cp $SCRIPT_DIR/system/functionsWithout $case/system/functions
         fi
-        sed -i -e 's/NFCT/'$nFCT'/g' -e 's/CCRIT/'$cCrit'/g' \
-               -e 's/CGRAD/'$cGrad'/g' -e 's/CORRSCHEME/'$corrScheme'/g' \
+        sed -i -e 's/NFCT/'$nFCT'/g' -e 's/CORRSCHEME/'$corrScheme'/g' \
                -e "s:RKCOEFFS:$RK:g" $case/system/functions
 
         ln -s $SCRIPT_DIR/constant/gmtDicts $case/constant
@@ -116,15 +114,16 @@ function postOne {
 }
 
 function initRunPost {
-    if [ "$#" -ne 12 ]; then
-        echo usage: initRunPost case smooth\|slotted uniform\|deforming\|divergent \
-             withDensity\|uniDensity\|noDensity dt nx plot\|noPlot nFCT \
-             CCRIT CGRAD CORRSCHEME RK3\|RK4
+    if [ "$#" -ne 10 ]; then
+        echo usage: initRunPost case dt nx \
+                            smooth\|slotted uniform\|deforming\|divergent \
+                            withDensity\|noDensity\|uniDensity  \
+                            CORRSCHEME RK3\|RK4 nFCT plot\|noPlot
         return 0
     fi
 
     case=$1
-    plot=$7
+    plot=${10}
 
     initOne $*
 
