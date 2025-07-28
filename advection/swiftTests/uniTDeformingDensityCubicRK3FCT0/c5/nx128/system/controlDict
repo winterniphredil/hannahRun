@@ -28,13 +28,13 @@ subSolverTime   0;
 
 stopAt          endTime;
 
-endTime         2; //100;
+endTime         10;
 
 deltaT          2;
 
 writeControl    runTime;
 
-writeInterval   2; //10;
+writeInterval   10;
 
 purgeWrite      0;
 

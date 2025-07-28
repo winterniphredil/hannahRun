@@ -24,15 +24,64 @@ params="smooth uniform uniDensity cubicUpwind RK3 0 plot"
 #initRunPost ${cRoot}/c05/nx128 0.2 128 $params
 #initRunPost ${cRoot}/c5/nx128 2 128 $params
 
+#cRoot=uniTDeformingDensityCubicRK3FCT0
+#params="uniT deforming withDensity cubicUpwind RK3 0 plot"
+#initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+#initRunPost ${cRoot}/c5/nx128 2 128 $params
+
 cRoot=slottedDeformingUniDensityCubicRK3FCT0
 params="slotted deforming uniDensity cubicUpwind RK3 0 plot"
 #initRunPost ${cRoot}/c05/nx128 0.2 128 $params
 #initRunPost ${cRoot}/c5/nx128 2 128 $params
 
-cRoot=uniTDeformingDensityCubicRK3FCT0
-params="uniT deforming withDensity cubicUpwind RK3 0 plot"
+cRoot=slottedDeformingDensityCubicRK3FCT0
+params="slotted deforming withDensity cubicUpwind RK3 0 plot"
 #initRunPost ${cRoot}/c05/nx128 0.2 128 $params
-initRunPost ${cRoot}/c5/nx128 2 128 $params
+#initRunPost ${cRoot}/c5/nx128 2 128 $params
+
+cRoot=slottedUniformNoDensityCubicRK3FCT1
+params="slotted uniform noDensity cubicUpwind RK3 1 plot"
+#initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+#initRunPost ${cRoot}/c5/nx128 2 128 $params
+
+cRoot=slottedDeformingNoDensityCubicRK3FCT1
+params="slotted deforming noDensity cubicUpwind RK3 1 plot"
+#initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+#initRunPost ${cRoot}/c5/nx128 2 128 $params
+
+cRoot=slottedUniformDensityCubicRK3FCT1
+params="slotted uniform withDensity cubicUpwind RK3 1 plot"
+#initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+#initRunPost ${cRoot}/c5/nx128 2 128 $params
+
+cRoot=slottedDeformingDensityCubicRK3FCT1
+params="slotted deforming withDensity cubicUpwind RK3 1 plot"
+#initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+#initRunPost ${cRoot}/c5/nx128 2 128 $params
+
+cRoot=slottedDeformingDensityQuinticRK4FCT1
+params="slotted deforming withDensity quinticUpwind RK4 1 plot"
+#initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+#initRunPost ${cRoot}/c5/nx128 2 128 $params
+
+cRoot=slottedDeformingDensityQuinticRK4FCT0
+params="slotted deforming withDensity quinticUpwind RK4 0 plot"
+#initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+#initRunPost ${cRoot}/c5/nx128 2 128 $params
+
+cRoot=slottedDeformingNoDensityQuinticRK4FCT0
+params="slotted deforming noDensity quinticUpwind RK4 0 plot"
+#initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+#initRunPost ${cRoot}/c5/nx128 2 128 $params
+
+cRoot=slottedDeformingNoDensityQuinticRK4FCT1
+params="slotted deforming noDensity quinticUpwind RK4 1 plot"
+#initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+#initRunPost ${cRoot}/c5/nx128 2 128 $params
+
+cRoot=slottedUniformUniDensityCubicRK3FCT1
+params="slotted uniform uniDensity cubicUpwind RK3 1 plot"
+initRunPost ${cRoot}/c05/nx128 0.2 128 $params
 
 
 # convergence plot
