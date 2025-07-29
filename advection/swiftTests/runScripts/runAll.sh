@@ -83,6 +83,14 @@ cRoot=slottedUniformUniDensityCubicRK3FCT1
 params="slotted uniform uniDensity cubicUpwind RK3 1 plot"
 initRunPost ${cRoot}/c05/nx128 0.2 128 $params
 
+cRoot=slottedUniformUniDensityCubicRK3FCT0
+params="slotted uniform uniDensity cubicUpwind RK3 0 plot"
+initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+
+cRoot=slottedUniformDensityCubicRK3FCT0
+params="slotted uniform withDensity cubicUpwind RK3 0 plot"
+initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+
 
 # convergence plot
 ./runScripts/plotErrorNorms.sh rho slottedUniformDensity_FCT0_quint
