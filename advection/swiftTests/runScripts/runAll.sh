@@ -4,10 +4,10 @@
 
 # u=10, L=1000, c = 2u dt/dx = 2u dt nx/L = dt nx 2/100
 
-# Check for consistency (T==1 or uniT)
-# with varying velocity
-# Check using rho==1   yes
+# Check for consistency (T==1 or uniT) yes
 # with varying velocity yes
+# Check using rho==1   
+# with varying velocity 
 # Check order of convergence in space and time
 # Mass conservation?
 
@@ -24,8 +24,8 @@ params="smooth uniform uniDensity cubicUpwind RK3 0 plot"
 #initRunPost ${cRoot}/c05/nx128 0.2 128 $params
 #initRunPost ${cRoot}/c5/nx128 2 128 $params
 
-#cRoot=uniTDeformingWithDensityCubicRK3FCT0
-#params="uniT deforming withDensity cubicUpwind RK3 0 plot"
+cRoot=uniTDeformingWithDensityCubicRK3FCT0
+params="uniT deforming withDensity cubicUpwind RK3 0 plot"
 #initRunPost ${cRoot}/c05/nx128 0.2 128 $params
 #initRunPost ${cRoot}/c5/nx128 2 128 $params
 
@@ -81,11 +81,11 @@ params="slotted deforming noDensity quinticUpwind RK4 1 plot"
 
 cRoot=slottedUniformUniDensityCubicRK3FCT1
 params="slotted uniform uniDensity cubicUpwind RK3 1 plot"
-initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+#initRunPost ${cRoot}/c05/nx128 0.2 128 $params
 
 cRoot=slottedUniformUniDensityCubicRK3FCT0
 params="slotted uniform uniDensity cubicUpwind RK3 0 plot"
-initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+#initRunPost ${cRoot}/c05/nx128 0.2 128 $params
 
 cRoot=slottedUniformWithDensityCubicRK3FCT0
 params="slotted uniform withDensity cubicUpwind RK3 0 plot"
@@ -122,4 +122,12 @@ params="smooth deforming withDensity cubicUpwind RK3 0"
 
 cRoot=smoothDeformingWithDensityCubicRK3FCT1
 params="smooth deforming withDensity cubicUpwind RK3 1"
+#convergenceTest $cRoot $params
+
+cRoot=smoothUniformWithDensityCubicRK3FCT0
+params="smooth uniform withDensity cubicUpwind RK3 0"
+#convergenceTest $cRoot $params
+
+cRoot=smoothUniformNoDensityCubicRK3FCT0
+params="smooth uniform noDensity cubicUpwind RK3 0"
 #convergenceTest $cRoot $params
