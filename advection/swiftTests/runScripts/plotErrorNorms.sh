@@ -42,7 +42,7 @@ inputFiles=(${inputFiles[*]} plots/4thOrder.dat\
 col=(3 3 3 3  2 2 2 2)
 colx=1
 legends=("c = 0.5" "c = 1" "c = 2" "c = 5.1" "1st/2nd/3rd/4th" "" "")
-pens=("black" "blue" "red" "green"  "0.25,black,1_4:0"
+pens=("black" "blue" "red" "1,purple"  "0.25,black,1_4:0"
       "0.25,black,1_4:0" "0.25,black,1_4:0" "0.25,black,1_4:0")
 symbols=("x7p" "c7p" "+7p" "s7p"
            "" "" "" "")

@@ -116,6 +116,17 @@ function postOne {
         else
             echo no $case/$time/$var
         fi
+    
+        for time in 50 100; do
+            if [[ -e $case/$time/$var ]]; then
+                if [[ $plot == plot ]]; then
+                    gmtFoam -case $case -time $time $var
+                    ev $case/$time/$var.pdf
+                fi
+            else
+                echo no $case/$time/$var
+            fi
+        done
     done
 }
 

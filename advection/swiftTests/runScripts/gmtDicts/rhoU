@@ -18,8 +18,7 @@ plotBoundaryDots false;
 FieldsToPlot
 (
     [rho filledContours 0.575 1.025 0.05 "$GMTU/colours/red_white_blue.cpt"]
-    [U vectors 3 17 "black"]
-    [rhoU vectors 3 17 "green"]
+    [../0/U vectors 3 17 "black"]
 );
 
 //region "0e3/450e3/0/30e3";

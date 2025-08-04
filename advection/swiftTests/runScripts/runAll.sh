@@ -88,8 +88,19 @@ params="slotted uniform uniDensity cubicUpwind RK3 0 plot"
 #initRunPost ${cRoot}/c05/nx128 0.2 128 $params
 
 cRoot=slottedUniformWithDensityCubicRK3FCT0
-params="slotted uniform withDensity cubicUpwind RK3 0 plot"
+params="slotted uniform withDensity cubicUpwind RK3 0 1.6 0.43 0.43 plot"
 #initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+initRunPost ${cRoot}/c5/nx128 2 128 $params
+
+cRoot=slottedUniformWithDensityQuinticRK4FCT0
+params="slotted uniform withDensity quinticUpwind RK4 0 1.7 0.45 0.39 plot"
+#initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+#initRunPost ${cRoot}/c5/nx128 2 128 $params
+
+cRoot=slottedUniformWithDensityQuinticRK4FCT1
+params="slotted uniform withDensity quinticUpwind RK4 1 1.7 0.45 0.39 plot"
+#initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+#initRunPost ${cRoot}/c5/nx128 2 128 $params
 
 # Convergence runs
 cRoot=smoothUniformNoDensityQuinticRK4FCT0
