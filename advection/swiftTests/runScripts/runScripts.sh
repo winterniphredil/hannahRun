@@ -162,14 +162,14 @@ function convergenceTest {
     
     cRoot=$1
     
-    #initRunPost ${cRoot}/c05/nx128 0.2 128 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0
-    #initRunPost ${cRoot}/c05/nx064 0.4 64 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0
-    #initRunPost ${cRoot}/c05/nx032 0.8 32 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0
+    initRunPost ${cRoot}/c05/nx128 0.2 128 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0
+    initRunPost ${cRoot}/c05/nx064 0.4 64 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0
+    initRunPost ${cRoot}/c05/nx032 0.8 32 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0
 
-    #initRunPost ${cRoot}/c1/nx200 0.25 200 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0
-    #initRunPost ${cRoot}/c1/nx100 0.5 100 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0
-    #initRunPost ${cRoot}/c1/nx050 1 50 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0
-    #initRunPost ${cRoot}/c1/nx025 2 25 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0
+    initRunPost ${cRoot}/c1/nx200 0.25 200 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0
+    initRunPost ${cRoot}/c1/nx100 0.5 100 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0
+    initRunPost ${cRoot}/c1/nx050 1 50 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0
+    initRunPost ${cRoot}/c1/nx025 2 25 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0
 
     initRunPost ${cRoot}/c2/nx200 0.5 200 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0
     initRunPost ${cRoot}/c2/nx100 1 100 $2 $3 $4 $5 $6 $7 $8 $9 ${10} 0

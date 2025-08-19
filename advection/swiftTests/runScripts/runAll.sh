@@ -102,13 +102,26 @@ params="slotted uniform withDensity quinticUpwind RK4 1 1.7 0.45 0.39 plot"
 #initRunPost ${cRoot}/c05/nx128 0.2 128 $params
 #initRunPost ${cRoot}/c5/nx128 2 128 $params
 
+cRoot=slottedUniformWithDensityQuinticRK4FCT1
+params="slotted uniform withDensity quinticUpwind RK4 1 1.7 0.45 0.39 plot"
+#initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+#initRunPost ${cRoot}/c5/nx128 2 128 $params
+
+cRoot=slottedDivergentWithDensityQuinticRK4FCT0
+params="slotted divergent withDensity quinticUpwind RK4 0 1.7 0.45 0.39 plot"
+#initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+#initRunPost ${cRoot}/c5/nx128 2 128 $params
+
+cRoot=slottedDivergentWithDensityQuinticRK4FCT1
+params="slotted divergent withDensity quinticUpwind RK4 1 1.7 0.45 0.39 plot"
+initRunPost ${cRoot}/c05/nx128 0.2 128 $params
+initRunPost ${cRoot}/c5/nx128 2 128 $params
+
+#####################################################
 # Convergence runs
+#####################################################
 cRoot=smoothUniformNoDensityQuinticRK4FCT0
 params="smooth uniform noDensity quinticUpwind RK4 0 1.7 0.45 0.39"
-#convergenceTest $cRoot $params
-
-cRoot=smoothUniformNoDensityQuinticRK4FCT1
-params="smooth uniform noDensity quinticUpwind RK4 1 1.7 0.45 0.39"
 #convergenceTest $cRoot $params
 
 cRoot=smoothUniformWithDensityQuinticRK4FCT0
@@ -121,19 +134,19 @@ params="smooth uniform withDensity quinticUpwind RK4 1 1.7 0.45 0.39"
 
 cRoot=smoothDeformingWithDensityQuinticRK4FCT0
 params="smooth deforming withDensity quinticUpwind RK4 0 1.7 0.45 0.39"
-#convergenceTest $cRoot $params
+convergenceTest $cRoot $params
 
 cRoot=smoothDeformingWithDensityQuinticRK4FCT1
 params="smooth deforming withDensity quinticUpwind RK4 1 1.7 0.45 0.39"
-#convergenceTest $cRoot $params
+convergenceTest $cRoot $params
 
 cRoot=smoothDeformingWithDensityCubicRK3FCT0
 params="smooth deforming withDensity cubicUpwind RK3 0 1.6 0.43 0.43"
-#convergenceTest $cRoot $params
+convergenceTest $cRoot $params
 
 cRoot=smoothDeformingWithDensityCubicRK3FCT1
 params="smooth deforming withDensity cubicUpwind RK3 1 1.6 0.43 0.43"
-#convergenceTest $cRoot $params
+convergenceTest $cRoot $params
 
 cRoot=smoothUniformWithDensityCubicRK3FCT0
 params="smooth uniform withDensity cubicUpwind RK3 0 1.6 0.43 0.43"
@@ -142,3 +155,11 @@ params="smooth uniform withDensity cubicUpwind RK3 0 1.6 0.43 0.43"
 cRoot=smoothUniformNoDensityCubicRK3FCT0
 params="smooth uniform noDensity cubicUpwind RK3 0 1.6 0.43 0.43"
 #convergenceTest $cRoot $params
+
+cRoot=smoothDivergentWithDensityQuinticRK4FCT0
+params="smooth divergent withDensity quinticUpwind RK4 0 1.7 0.45 0.39"
+convergenceTest $cRoot $params
+
+cRoot=smoothDivergentWithDensityCubicRK3FCT0
+params="smooth divergent withDensity cubicUpwind RK3 0 1.6 0.43 0.43"
+convergenceTest $cRoot $params

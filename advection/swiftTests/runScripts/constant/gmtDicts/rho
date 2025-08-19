@@ -18,6 +18,8 @@ plotBoundaryDots false;
 FieldsToPlot
 (
     [rho filledContours 0.575 1.025 0.05 "$GMTU/colours/red_white_blue.cpt"]
+    [rho contours 1 1.7 0.05 "1,white"]
+    [rho contours 0.35 0.6 0.05 "1,white"]
     [U vectors 3 34 "black"]
 );
 
