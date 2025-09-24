@@ -16,7 +16,7 @@ FoamFile
 
 solvers
 {
-    "T"
+    "T|rho|rhoT"
     {
         solver          GAMG; //PBiCGStab; //PBiCG; //smoothSolver;
         //preconditioner  DILU;

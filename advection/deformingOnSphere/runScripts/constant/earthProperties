@@ -15,7 +15,7 @@ FoamFile
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 earthRadius earthRadius [0 1 0 0 0] 0.99;
-polarCell false;
+polarCell PCELL;
 maxLonRatio SKIP;
 nLat NY;
 nLon NX;

@@ -3,7 +3,7 @@
 # Generate a new mesh for a new case
 function meshGen {
     if [ "$#" -lt 2 ]; then
-        echo usage: meshGen latLon_0_Full\|latLon_30_Full\|latLon_0_Skipped\|latLon_30_Skipped\|cubedSphere\|hexagonal RES [plot]
+        echo usage: meshGen latLon_0_Full\|latLon_30_Full\|latLon_0_P\|latLon_30_P\|latLon_0_Skipped\|latLon_30_Skipped\|cubedSphere\|hexagonal RES [plot]
         return 1
     fi
 
@@ -11,7 +11,8 @@ function meshGen {
     res=$2
     plot=$3
     case=''
-    read -r meshType rot subType <<<$(echo $fullMeshType | awk -F'_' '{print $1, $2, $3}')
+    read -r meshType rot subType <<<$(echo $fullMeshType \
+        | awk -F'_' '{print $1, $2, $3}')
     
 
     if [[ $meshType  == latLon ]]; then
@@ -21,10 +22,12 @@ function meshGen {
         mkdir -p $case $case/constant
         cp -r runScripts/system $case
         if [[ ! -a $case/constant/polyMesh/points ]]; then
-            nSkip=`if [[ $subType == Full ]]; then echo 0; else echo 2; fi`
+            nSkip=`if [[ $subType == Skipped ]]; then echo 2; else echo 0; fi`
+            polarCell=`if [[ $subType == P ]]; then echo true; else echo false; fi`
             sed -e 's/NX/'$nx'/g' -e 's/NY/'$ny'/g' -e 's/SKIP/'$nSkip'/g' \
-                -e 's/ROT/'$rot'/g' runScripts/constant/earthProperties \
-                >$case/constant/earthProperties
+                -e 's/ROT/'$rot'/g' -e 's/PCELL/'$polarCell'/g' \
+                runScripts/constant/earthProperties \
+                    >$case/constant/earthProperties
             sphPolarLatLonMesh -case $case >& $case/sphPolarLatLonMesh.log
         fi
     elif [[ $meshType == cubedSphere ]]; then
@@ -38,7 +41,7 @@ function meshGen {
             tanPoints -case $case >& $case/tanPoints.log
             sed -i -e 's:SOURCECASE:'$case':g' -e 's:FROM:patch:g' \
                    -e 's:FLIP:false:g' $case/system/extrudeMeshDict
-            extrudeMesh -case $case
+            extrudeMesh -case $case >& $case/extrudeMesh.log
         fi
     elif [[ $meshType == hexagonal ]]; then
         case=$fullMeshType/hex${res}
@@ -48,7 +51,7 @@ function meshGen {
             cp $HOME/f77/buckyball_griddata/grid$res.out/patch.obj $case/constant
             sed -i -e 's:SOURCECASE:'$case':g' -e 's:FROM:surface:g' \
                    -e 's:FLIP:true:g' $case/system/extrudeMeshDict
-            extrudeMesh -case $case
+            extrudeMesh -case $case >& $case/extrudeMesh.log
         fi
     fi
     
@@ -64,15 +67,17 @@ function meshGen {
 }
 
 function initialise {
-    if [ "$#" -lt 3 ]; then
-        echo usage: initialise case smooth\|slotted deforming [plot]
+    if [ "$#" -lt 4 ]; then
+        echo usage: initialise caseRoot smooth\|slotted \
+                    noDensity\|uniDensity\|varyDensity deforming [plot]
         return 1
     fi
     caseRoot=$1
     tracerType=$2
-    velocityType=$3
-    plot=$4
-    case=$caseRoot/${tracerType}$velocityType
+    densityType=$3
+    velocityType=$4
+    plot=$5
+    case=$caseRoot/${tracerType}${densityType}${velocityType}
     
     if [[ ! -e $caseRoot ]]; then
         echo initialise case $case
@@ -82,7 +87,7 @@ function initialise {
 
     if [[ ! -a $case/0/T ]]; then
         mkdir -p $case $case/constant
-        ln -sf ../system $case/system
+        cp -r $caseRoot/system $case/system
         ln -sf ../../constant/polyMesh $case/constant/polyMesh
         rm -rf $case/0
         cp -r runScripts/init0 $case/0
@@ -91,12 +96,24 @@ function initialise {
         ln -sf ../../../../runScripts/gmtDicts $case/constant/gmtDicts
         cp runScripts/constant/physicalProperties \
            runScripts/constant/momentumTransport $case/constant
-        setVelocityField -case $case -dict velocityDict >& $case/setVelocityField.log
+        setVelocityField -case $case -dict velocityDict \
+            >& $case/setVelocityField.log
         setTracerField -case $case -name T -tracerDict tracerDict \
             >& $case/setTracerField.log
         if [[ $plot == plot ]]; then
             gmtFoam -case $case -time 0 UT >& $case/gmtFoam.log
             ev $case/0/UT.pdf
+        fi
+        if [[ $densityType == varyDensity ]]; then
+            cp runScripts/system/functionsWithDensity \
+                $case/system/functions
+            cp runScripts/constant/rhoTracerDict $case/constant
+            setTracerField -case $case -name rho -tracerDict rhoTracerDict \
+                >& $case/setRhoField.log
+            if [[ $plot == plot ]]; then
+                gmtFoam -case $case -time 0 rhoU >& $case/gmtFoam.log
+                ev $case/0/rhoU.pdf
+            fi
         fi
     fi
     echo $case
@@ -104,7 +121,7 @@ function initialise {
 
 function testCase {
     if [ "$#" -ne 5 ]; then
-        echo usage: testCase case dt cubicUpwind\|quinticUpwind RK3\|RK4 nFCT
+        echo usage: testCase caseRoot dt cubicUpwind\|quinticUpwind RK3\|RK4 nFCT
         return 1
     fi
     caseRoot=$1
@@ -146,29 +163,30 @@ function testCase {
     cp runScripts/system/fvSchemes runScripts/system/fvSolution $case/system
     sed -e 's/NFCT/'$nFCT'/g' -e "s:RKCOEFFS:$RK:g" \
         -e "s:BETACOEFFS:$BETACOEFFS:g" -e 's/CORRSCHEME/'$spaceScheme'/g' \
-        runScripts/system/functions > $case/system/functions
+        $caseRoot/system/functions > $case/system/functions
     echo $case
 }
 
 function initRun {
-    if [ "$#" -lt 8 ]; then
-        echo usage: initRunPost meshType nx tracerType velocityType dt \
-                     cubicUpwind\|quinticUpwind RK3\|RK4 nFCT [plot]
+    if [ "$#" -lt 9 ]; then
+        echo usage: initRunPost meshType nx tracerType densityType velocityType\
+                    dt cubicUpwind\|quinticUpwind RK3\|RK4 nFCT [plot]
         return 1
     fi
     meshType=$1
     nx=$2
     tracerType=$3
-    velocityType=$4
-    dt=$5
-    spaceScheme=$6
-    timeScheme=$7
-    nFCT=$8
-    plot=$9
+    densityType=$4
+    velocityType=$5
+    dt=$6
+    spaceScheme=$7
+    timeScheme=$8
+    nFCT=$9
+    plot=${10}
     case=`meshGen $meshType $nx $plot`
     echo $case
     ls $case/*.log
-    case=`initialise $case $tracerType $velocityType $plot`
+    case=`initialise $case $tracerType $densityType $velocityType $plot`
     echo $case
     ls $case/*.log
     case=`testCase $case $dt $spaceScheme $timeScheme $nFCT`
@@ -185,7 +203,7 @@ function postOne {
     
     case=$1
     T=5
-    errorNorms $case $T T 0 T
+    errorNorms $case 0 T $T T
     logStats.sh $case T
     rm $case/c.dat
     times=(`grep ^Time $case/log | awk -F'=' '{print $2}' | awk -F's' '{print $1}'`)
@@ -197,12 +215,28 @@ function postOne {
     echo -e ${times[*]}\\n${cs[*]}\\n${Tmins[*]}\\n${Tmaxs[*]} | \
         awk '{ for (i=1; i<=NF; i++) a[i]= (a[i]? a[i] FS $i: $i) } END{ for (i in a) print a[i] }' >> $case/cTminmax.dat
 
+    withRho=1
+    if [[ ! -a $case/$T/rho ]]; then
+        withRho=0
+    else
+        uni=`grep -a uniform $case/0/rho | awk '{print $2}'`
+        if [[ $uni == uniform ]]; then
+            withRho=0
+        fi
+    fi
+        
     if [[ $2 == plot ]]; then
         foamPostProcess -case $case -time 2.5 -func CourantNoU
         gmtFoam -case $case -time 2.5 Tslot
         foamPostProcess -case $case -time $T -func CourantNoU
         gmtFoam -case $case -time $T Tslot
         ev $case/*/Tslot.pdf
+        
+        if [[ $withRho == 1 ]]; then
+            gmtFoam -case $case -time 2.5 rho
+            gmtFoam -case $case -time 5 rho
+            ev $case/*/rho.pdf
+        fi
     fi
 }
 
