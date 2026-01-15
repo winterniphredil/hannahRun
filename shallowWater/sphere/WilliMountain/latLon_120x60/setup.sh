@@ -18,12 +18,10 @@ setVelocityField -dict earthProperties -velocityType geodesicSolidBody
 rm 0/Uf 0/phi
 
 # Create geopotential height
-# Note, this should be replaced by discretely balanced height
 cp init0/h 0
 setTracerField -tracerDict earthProperties -tracerType geodesicSolidRotation \
      -name h
-# Correct boundary conditions
-#sed -i 's/zeroGradient/fixedValue;value uniform 0/g' 0/h
+setBalancedHeight
 rm 0/hf
 mv 0/h 0/hTotal
 sumFields 0 h 0 hTotal constant h0 -scale1 -1
