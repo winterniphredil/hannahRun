@@ -24,13 +24,13 @@ subSolverTime   0;
 
 stopAt          endTime;
 
-endTime         3600; //86400; //1296000;
+endTime         1296000;
 
-deltaT          3600;
+deltaT          1800;
 
 writeControl    runTime;
 
-writeInterval   3600; //43200;
+writeInterval   21600;
 
 purgeWrite      0;
 
@@ -42,10 +42,8 @@ writeCompression off;
 
 timeFormat      general;
 
-timePrecision   6;
+timePrecision   7;
 
 runTimeModifiable false;
-
-libs ("libsolverFunctionObjects2.so" "libfiniteVolumeAtmosFOAM.so");
 
 // ************************************************************************* //

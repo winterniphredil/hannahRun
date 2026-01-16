@@ -27,12 +27,12 @@ gradSchemes
 divSchemes
 {
     default         none;
-    div(phi,U)      Gauss linearUpwind linearUpwind;
+    div(flux,U)     Gauss linearUpwind linearUpwind;
 }
 
 laplacianSchemes
 {
-    default         Gauss linear uncorrected;
+    default         Gauss linear corrected;
 }
 
 interpolationSchemes
@@ -42,7 +42,7 @@ interpolationSchemes
 
 snGradSchemes
 {
-    default         uncorrected;
+    default         corrected;
 }
 
 

@@ -14,34 +14,18 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-nOuterCorrs 1;
-nPressureCorrs 1;
-nNonOrthogCorrs 1;
-timeOffCenter 1;
+nIterations 2;
+timeOffCentre 0.5;
 
 solvers
 {
-    "U"
-    {
-        solver          GAMG; //PBiCGStab; //PBiCG; //smoothSolver;
-        //preconditioner  DILU;
-        smoother        DILUGaussSeidel; //symGaussSeidel;
-        tolerance       1e-6;
-        relTol          0;
-    }
     "h"
     {
-        solver          GAMG; //PBiCGStab; //PBiCG; //smoothSolver;
-        //preconditioner  DILU;
-        smoother        symGaussSeidel;
-        tolerance       1e-6;
-        relTol          0;
+        solver    GAMG;
+        smoother  GaussSeidel;
+        tolerance 1e-6;
+        relTol    0;
     }
-}
-
-initialisation
-{
-    maxIters 100;
 }
 
 // ************************************************************************* //

@@ -13,15 +13,16 @@ rm constant/h0f
 
 # Create wind field
 mkdir -p 0
-cp init0/U 0
+cp init0/U init0/Uf 0
 setVelocityField -dict earthProperties -velocityType geodesicSolidBody
-rm 0/Uf 0/phi
+rm 0/phi*
 
 # Create geopotential height
 cp init0/h 0
 setTracerField -tracerDict earthProperties -tracerType geodesicSolidRotation \
      -name h
-setBalancedHeight
+# setBalancedHeight #makes the initial conditions discretely divergence free
+# But it is not working yet
 rm 0/hf
 mv 0/h 0/hTotal
 sumFields 0 h 0 hTotal constant h0 -scale1 -1

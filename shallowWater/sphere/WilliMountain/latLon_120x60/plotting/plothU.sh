@@ -25,6 +25,7 @@ gmt psbasemap -R0/360/-90/90 -JQ0/18c -B60/60 -K > $outFile.ps
 
 # Create colours for the total height and plot
 gmt makecpt -Cjet -D -T5000/6000/50 > plotting/hcontours.cpt
+#gmt makecpt -Cjet -D -T-2050/2050/100 > plotting/hcontours.cpt
 gmt pscontour $time/hTotal.latLon -J -R \
     -Cplotting/hcontours.cpt -A- -I -h1 -K -O >> $outFile.ps
 
@@ -43,5 +44,5 @@ gzip -f $outFile.eps
 evince $outFile.eps.gz &
 
 # Tidy up
-rm constant/h0.latLon $time/hTotal.latLon $time/U.latLon* $outFile.ps
+rm constant/*.latLon* $time/*.latLon* $outFile.ps
 
