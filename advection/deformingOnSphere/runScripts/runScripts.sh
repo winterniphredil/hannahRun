@@ -294,14 +294,14 @@ function plotStats2 {
 
     outFile=plots/varyDensityTMin.eps; col=3;
     ylabel="min @~y@~ - 0.1"; ymin=-1e-6; ymax=1e-6; dy=1e-6; ddy=1e-6
-    projection=X15c/5c; yscale="-0.1"
+    projection=X12c/4c; yscale="-0.1"
     source gmtPlot
     makebb $outFile > /dev/null
     ev $outFile
     
     outFile=plots/varyDensityTMax.eps; col=4; xlabel=""
     ylabel="max @~y@~ - 1"; ymin=-4e-4; ymax=1e-4; dy=1e-4; ddy=1e-4
-    projection=X15c/5c; yscale=""
+    projection=X12c/4c; yscale=""
     source gmtPlot
     makebb $outFile > /dev/null
     ev $outFile
@@ -312,8 +312,8 @@ function plotStats2 {
     legends+=('c = 1' 'c = 1.7')
     pens=(${pens[*]} "0.25,black,1-1" "0.25,black,1-1")
     outFile=plots/varyDensitycMax.eps; col=2; 
-    ylabel="Courant number"; ymin=0.1; ymax=100; dy=10; ddy=10
-    projection=X15c/10cl; legPos=x1/4.5
+    xlabel="Time"; ylabel="Courant number"; ymin=0.1; ymax=100; dy=10; ddy=10
+    projection=X12c/8cl; legPos=x1/4.5
     source gmtPlot
     ev $outFile
 }

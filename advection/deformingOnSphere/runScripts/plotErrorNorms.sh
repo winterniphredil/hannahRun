@@ -51,7 +51,7 @@ symbols=("x7p" "c7p" "+7p" "s7p"
            "" "" "" "")
 #         "+10p" "t10p" "h10p"
 #spens=("black" "blue" "red" "green" "cyan" "magenta" "" "" "")
-xlabel='max @~D@~x@+o@+'
+xlabel='max @~D f@~'
 ylabel=''
 xmin=0.5
 xmax=5
