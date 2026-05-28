@@ -1,0 +1,122 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-441953dfbb42
+Exec   : sumFields 0 hTotal 0 h constant h0
+Date   : May 27 2026
+Time   : 14:59:46
+Host   : "uorc104p34"
+PID    : 507837
+I/O    : uncollated
+Case   : /home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon_120x60/run_AdImEx
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0 region "region0"
+Writing 0/"hTotal"
+Min = 4992.372843 in cell 0 max = 5959.358566 in cell 2691
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-441953dfbb42
+Exec   : writeCellDataLatLon -constant h0
+Date   : May 27 2026
+Time   : 14:59:46
+Host   : "uorc104p34"
+PID    : 507838
+I/O    : uncollated
+Case   : /home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon_120x60/run_AdImEx
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = constant
+
+Time = constant
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon_120x60/run_AdImEx/constant/h0.latLon"
+Time = 0
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon_120x60/run_AdImEx/0/h0.latLon"
+No h0
+
+ end 
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-441953dfbb42
+Exec   : writeCellDataLatLon -time 0 hTotal
+Date   : May 27 2026
+Time   : 14:59:46
+Host   : "uorc104p34"
+PID    : 507839
+I/O    : uncollated
+Case   : /home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon_120x60/run_AdImEx
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Time = 0
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon_120x60/run_AdImEx/0/hTotal.latLon"
+
+ end 
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-441953dfbb42
+Exec   : writeCellDataLatLon -time 0 U
+Date   : May 27 2026
+Time   : 14:59:46
+Host   : "uorc104p34"
+PID    : 507840
+I/O    : uncollated
+Case   : /home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon_120x60/run_AdImEx
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Time = 0
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon_120x60/run_AdImEx/0/U.latLon"
+
+ end 
+Input files: 0/hU.ps
+Processing: 0/hU.ps
+Rendering with existing %%BoundingBox: 0 0 595 842
+Calculating Bounding Box...ready. %%BoundingBox: 212 37 542 617
+Creating output file 0/hU.eps ... ready.

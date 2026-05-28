@@ -1,0 +1,103 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-441953dfbb42
+Exec   : AdImExShallowWaterFoam
+Date   : May 27 2026
+Time   : 14:59:49
+Host   : "uorc104p34"
+PID    : 507880
+I/O    : uncollated
+Case   : /home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon_120x60/run_AdImEx
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+Reading earthProperties
+Reading field h0 (mountain heights) if present
+
+Mountain height from 0 to 1820.568544
+Reading field h
+
+Reading in velocity field U (cell centre velocity)
+
+Creating Coriolis Force
+
+Starting time loop
+
+
+ Time = 3600
+
+Courant number mean: 0.1948988536 max: 0.2196920002
+Gravity wave Courant number max: 5.515632814
+GAMG:  Solving for Ux, Initial residual = 0.002381671558, Final residual = 3.102145625e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.002270177236, Final residual = 2.930715136e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9999999978, Final residual = 1.221810508e-09, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.002556939771, Final residual = 2.222149668e-09, No Iterations 8
+GAMG:  Solving for h, Initial residual = 1.83067211e-06, Final residual = 1.824550812e-09, No Iterations 3
+GAMG:  Solving for h, Initial residual = 2.323086735e-08, Final residual = 1.076042494e-09, No Iterations 1
+GAMG:  Solving for h, Initial residual = 1.063684933e-09, Final residual = 1.063684933e-09, No Iterations 0
+GAMG:  Solving for Ux, Initial residual = 0.002208231597, Final residual = 1.294180062e-11, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.0021453883, Final residual = 1.15392615e-11, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.6774865587, Final residual = 5.218141738e-09, No Iterations 1
+GAMG:  Solving for h, Initial residual = 7.502536683e-05, Final residual = 9.480488605e-09, No Iterations 5
+GAMG:  Solving for h, Initial residual = 6.590848244e-08, Final residual = 4.758076553e-09, No Iterations 1
+GAMG:  Solving for h, Initial residual = 4.884148089e-09, Final residual = 4.884148089e-09, No Iterations 0
+GAMG:  Solving for h, Initial residual = 4.884148089e-09, Final residual = 4.884148089e-09, No Iterations 0
+ExecutionTime = 0.113022 s  ClockTime = 0 s
+
+
+ Time = 7200
+
+Courant number mean: 0.1950046536 max: 0.2381442812
+Gravity wave Courant number max: 5.516002785
+GAMG:  Solving for Ux, Initial residual = 0.003549873198, Final residual = 1.557840862e-10, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.002619074071, Final residual = 5.389398995e-11, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7033975077, Final residual = 5.646583505e-14, No Iterations 2
+GAMG:  Solving for h, Initial residual = 0.02481336727, Final residual = 2.300141578e-09, No Iterations 9
+GAMG:  Solving for h, Initial residual = 1.726305543e-05, Final residual = 2.19474303e-09, No Iterations 4
+GAMG:  Solving for h, Initial residual = 1.663767257e-07, Final residual = 8.002865607e-09, No Iterations 1
+GAMG:  Solving for h, Initial residual = 7.713077061e-09, Final residual = 7.713077061e-09, No Iterations 0
+GAMG:  Solving for Ux, Initial residual = 0.002946867028, Final residual = 3.79151736e-09, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.002382561472, Final residual = 3.495927432e-09, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.2094703401, Final residual = 2.749891638e-11, No Iterations 2
+GAMG:  Solving for h, Initial residual = 0.0007448673198, Final residual = 2.035201251e-09, No Iterations 7
+GAMG:  Solving for h, Initial residual = 4.074819523e-07, Final residual = 2.855073919e-09, No Iterations 2
+GAMG:  Solving for h, Initial residual = 8.396867215e-09, Final residual = 8.396867215e-09, No Iterations 0
+GAMG:  Solving for h, Initial residual = 8.396867215e-09, Final residual = 8.396867215e-09, No Iterations 0
+ExecutionTime = 0.197422 s  ClockTime = 0 s
+
+
+ Time = 10800
+
+Courant number mean: 0.196088442 max: 0.2999480911
+Gravity wave Courant number max: 5.52401703
+GAMG:  Solving for Ux, Initial residual = 0.0113225566, Final residual = 5.778059289e-12, No Iterations 2
+GAMG:  Solving for Uy, Initial residual = 0.007344695527, Final residual = 1.453848974e-12, No Iterations 2
+GAMG:  Solving for Uz, Initial residual = 0.439576622, Final residual = 8.577432793e-11, No Iterations 2
+GAMG:  Solving for h, Initial residual = 0.02021281512, Final residual = 5.168082478e-09, No Iterations 8
+GAMG:  Solving for h, Initial residual = 1.937415324e-05, Final residual = 2.754039233e-09, No Iterations 4
+GAMG:  Solving for h, Initial residual = 2.451387521e-07, Final residual = 9.083041401e-09, No Iterations 1
+GAMG:  Solving for h, Initial residual = 9.055030191e-09, Final residual = 9.055030191e-09, No Iterations 0
+GAMG:  Solving for Ux, Initial residual = 0.003156179608, Final residual = 2.066276329e-11, No Iterations 2
+GAMG:  Solving for Uy, Initial residual = 0.002704170528, Final residual = 1.754419218e-11, No Iterations 2
+GAMG:  Solving for Uz, Initial residual = 0.07529639261, Final residual = 8.568522292e-10, No Iterations 2
+GAMG:  Solving for h, Initial residual = 0.0004453616131, Final residual = 8.356669638e-09, No Iterations 6
+GAMG:  Solving for h, Initial residual = 5.668373514e-07, Final residual = 3.810664275e-09, No Iterations 2
+GAMG:  Solving for h, Initial residual = 1.009796755e-08, Final residual = 8.052308039e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 8.266784809e-10, Final residual = 8.266784809e-10, No Iterations 0
+ExecutionTime = 0.285114 s  ClockTime = 0 s
+
+End
+

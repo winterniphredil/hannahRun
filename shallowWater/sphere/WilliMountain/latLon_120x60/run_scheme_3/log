@@ -1,0 +1,507 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-441953dfbb42
+Exec   : CgridShallowWaterFoamSplit -3
+Date   : May 27 2026
+Time   : 14:48:09
+Host   : "uorc104p34"
+PID    : 506425
+I/O    : uncollated
+Case   : /home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon_120x60/run_scheme_3
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+Reading earthProperties
+Reading field h0 (mountain heights) if present
+
+Mountain height from 0 to 1820.568544
+Creating Coriolis Force
+Reading field h
+
+Reading in velocity field Uf (velocity on face)
+
+
+Starting time loop
+
+
+ Time = 300
+Courant number mean: 0.01657840186 max: 0.02745629775
+Gravity wave Courant number max: 0.4596360678
+GAMG:  Solving for Ux, Initial residual = 0.005724461549, Final residual = 5.070629615e-14, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005686662513, Final residual = 8.467895004e-14, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9999999998, Final residual = 5.564944544e-12, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0002237159872, Final residual = 4.990634307e-11, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.00539024343, Final residual = 5.771603133e-14, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005325369825, Final residual = 9.352891412e-14, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9999594919, Final residual = 6.041691138e-12, No Iterations 1
+GAMG:  Solving for h, Initial residual = 6.194020058e-07, Final residual = 7.690436786e-11, No Iterations 1
+ExecutionTime = 0.054638 s  ClockTime = 0 s
+
+ Time = 600
+Courant number mean: 0.01657838245 max: 0.02744709249
+Gravity wave Courant number max: 0.4596366284
+GAMG:  Solving for Ux, Initial residual = 0.005724424648, Final residual = 5.274807868e-14, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005686645694, Final residual = 8.971074405e-14, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.99995565, Final residual = 5.825714419e-12, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0002097785658, Final residual = 3.666798424e-11, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.00539314447, Final residual = 6.637355195e-14, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005325370228, Final residual = 9.92558352e-14, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9995670313, Final residual = 6.487104331e-12, No Iterations 1
+GAMG:  Solving for h, Initial residual = 6.116857282e-07, Final residual = 7.208101178e-11, No Iterations 1
+ExecutionTime = 0.082461 s  ClockTime = 0 s
+
+ Time = 900
+Courant number mean: 0.01657836359 max: 0.02743783025
+Gravity wave Courant number max: 0.4596380469
+GAMG:  Solving for Ux, Initial residual = 0.005724366185, Final residual = 5.498364119e-14, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005686659032, Final residual = 9.660244172e-14, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9995567696, Final residual = 6.105250265e-12, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.000198492185, Final residual = 2.665417648e-11, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005398779173, Final residual = 7.518556809e-14, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.0053254035, Final residual = 1.072042159e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9985702946, Final residual = 7.022397194e-12, No Iterations 1
+GAMG:  Solving for h, Initial residual = 5.959277256e-07, Final residual = 6.351289826e-11, No Iterations 1
+ExecutionTime = 0.109718 s  ClockTime = 0 s
+
+ Time = 1200
+Courant number mean: 0.01657834544 max: 0.02742876587
+Gravity wave Courant number max: 0.459640253
+GAMG:  Solving for Ux, Initial residual = 0.005724312571, Final residual = 5.763455389e-14, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005686699082, Final residual = 1.055413046e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9985279247, Final residual = 6.449763827e-12, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001886589765, Final residual = 1.910394912e-11, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005406507557, Final residual = 8.56676076e-14, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005325469611, Final residual = 1.17943369e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9968655292, Final residual = 7.791610611e-12, No Iterations 1
+GAMG:  Solving for h, Initial residual = 5.767419038e-07, Final residual = 5.321965324e-11, No Iterations 1
+ExecutionTime = 0.138562 s  ClockTime = 0 s
+
+ Time = 1500
+Courant number mean: 0.01657832817 max: 0.02742014821
+Gravity wave Courant number max: 0.4596431425
+GAMG:  Solving for Ux, Initial residual = 0.005724388357, Final residual = 6.105257994e-14, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005686767416, Final residual = 1.168379867e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.996779814, Final residual = 6.938698061e-12, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001797139422, Final residual = 1.37701168e-11, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005414941724, Final residual = 9.973387142e-14, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005325570939, Final residual = 1.318983292e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9945181882, Final residual = 8.97246323e-12, No Iterations 1
+GAMG:  Solving for h, Initial residual = 5.538073333e-07, Final residual = 4.181332953e-11, No Iterations 1
+ExecutionTime = 0.175938 s  ClockTime = 0 s
+
+ Time = 1800
+Courant number mean: 0.0165783119 max: 0.02741220815
+Gravity wave Courant number max: 0.4596465827
+GAMG:  Solving for Ux, Initial residual = 0.005724642512, Final residual = 6.561716656e-14, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005686864457, Final residual = 1.305586194e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9943846342, Final residual = 7.680320771e-12, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001713336523, Final residual = 1.016417016e-11, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005423678325, Final residual = 1.197700525e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005325709622, Final residual = 1.498226764e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9915897109, Final residual = 1.075198587e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 5.29905285e-07, Final residual = 3.241880479e-11, No Iterations 1
+ExecutionTime = 0.209892 s  ClockTime = 0 s
+
+ Time = 2100
+Courant number mean: 0.01657829673 max: 0.02740514778
+Gravity wave Courant number max: 0.4596504188
+GAMG:  Solving for Ux, Initial residual = 0.005724966115, Final residual = 7.186067397e-14, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005686989535, Final residual = 1.471478601e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9909995074, Final residual = 8.800779803e-12, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001635573673, Final residual = 7.81733863e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005431869714, Final residual = 1.473954091e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005325887147, Final residual = 1.724686829e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9877390387, Final residual = 1.327951233e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 5.068065451e-07, Final residual = 2.993956586e-11, No Iterations 1
+ExecutionTime = 0.240285 s  ClockTime = 0 s
+
+ Time = 2400
+Courant number mean: 0.01657828274 max: 0.0273991312
+Gravity wave Courant number max: 0.4596544819
+GAMG:  Solving for Ux, Initial residual = 0.005725343409, Final residual = 8.041378012e-14, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005687142885, Final residual = 1.671786005e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9863641315, Final residual = 1.043691696e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001562748915, Final residual = 6.255611413e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005439366991, Final residual = 1.829656506e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005326105768, Final residual = 2.004877326e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9827102066, Final residual = 1.664391306e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 4.83634171e-07, Final residual = 3.61261187e-11, No Iterations 1
+ExecutionTime = 0.269574 s  ClockTime = 0 s
+
+ Time = 2700
+Courant number mean: 0.01657827002 max: 0.02739427757
+Gravity wave Courant number max: 0.4596585965
+GAMG:  Solving for Ux, Initial residual = 0.005725770709, Final residual = 9.184642222e-14, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005687323071, Final residual = 1.913019659e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9807031008, Final residual = 1.2729139e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001495150439, Final residual = 5.196767848e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005445744035, Final residual = 2.257666138e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.00532636602, Final residual = 2.337257995e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9767445558, Final residual = 2.085278876e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 4.642212357e-07, Final residual = 4.70623614e-11, No Iterations 1
+ExecutionTime = 0.299321 s  ClockTime = 0 s
+
+ Time = 3000
+Courant number mean: 0.01657825861 max: 0.02739065682
+Gravity wave Courant number max: 0.459662589
+GAMG:  Solving for Ux, Initial residual = 0.005726239698, Final residual = 1.073874573e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005687531358, Final residual = 2.204620452e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9738071083, Final residual = 1.580133367e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.000142955022, Final residual = 5.033402507e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005451091974, Final residual = 2.730116058e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005326671391, Final residual = 2.717876138e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.969626612, Final residual = 2.599664653e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 4.494660529e-07, Final residual = 5.614264235e-11, No Iterations 1
+ExecutionTime = 0.327243 s  ClockTime = 0 s
+
+ Time = 3300
+Courant number mean: 0.01657824857 max: 0.02738828817
+Gravity wave Courant number max: 0.4596662951
+GAMG:  Solving for Ux, Initial residual = 0.00572674185, Final residual = 1.283393853e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005687766712, Final residual = 2.555577067e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9656924052, Final residual = 1.975442356e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001364182567, Final residual = 4.955629501e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005455838679, Final residual = 3.221242078e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005327022164, Final residual = 3.141838057e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9613291557, Final residual = 3.221055772e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 4.452738258e-07, Final residual = 6.187664297e-11, No Iterations 1
+ExecutionTime = 0.353661 s  ClockTime = 0 s
+
+ Time = 3600
+Courant number mean: 0.01657823995 max: 0.02738714174
+Gravity wave Courant number max: 0.4596695671
+GAMG:  Solving for Ux, Initial residual = 0.005727265841, Final residual = 1.548147854e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005688029536, Final residual = 2.971464724e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9564503498, Final residual = 2.465947022e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001302967154, Final residual = 4.870102174e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005459805856, Final residual = 3.752223937e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005327416858, Final residual = 3.640066459e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9519989009, Final residual = 3.997337671e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 4.431383328e-07, Final residual = 6.434850861e-11, No Iterations 1
+ExecutionTime = 0.382363 s  ClockTime = 0 s
+
+ Time = 3900
+Courant number mean: 0.01657823278 max: 0.02738714293
+Gravity wave Courant number max: 0.4596722802
+GAMG:  Solving for Ux, Initial residual = 0.005727804185, Final residual = 1.87330431e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005688319029, Final residual = 3.459987622e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9459189651, Final residual = 3.055260577e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001246959549, Final residual = 4.759525241e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.00546311399, Final residual = 4.309274187e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005327857512, Final residual = 4.311600118e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.941464809, Final residual = 4.894963077e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 4.373573899e-07, Final residual = 6.396703582e-11, No Iterations 1
+ExecutionTime = 0.412809 s  ClockTime = 0 s
+
+ Time = 4200
+Courant number mean: 0.01657822709 max: 0.02738817949
+Gravity wave Courant number max: 0.4596743374
+GAMG:  Solving for Ux, Initial residual = 0.005728361396, Final residual = 2.257019565e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005688636411, Final residual = 4.023428733e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9343255073, Final residual = 3.745156363e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001190785369, Final residual = 4.691757645e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005465453562, Final residual = 4.90618798e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005328345839, Final residual = 5.090475469e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9299556969, Final residual = 5.902182185e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 4.278752453e-07, Final residual = 6.139973376e-11, No Iterations 1
+ExecutionTime = 0.440718 s  ClockTime = 0 s
+
+ Time = 4500
+Courant number mean: 0.01657822291 max: 0.02739011084
+Gravity wave Courant number max: 0.4596756731
+GAMG:  Solving for Ux, Initial residual = 0.005728916794, Final residual = 2.694949575e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005688980496, Final residual = 4.662567221e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.922150568, Final residual = 4.532560134e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001136497149, Final residual = 4.580525699e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005467024252, Final residual = 5.649839051e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005328880186, Final residual = 5.943672687e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9179469406, Final residual = 6.994341765e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 4.141726492e-07, Final residual = 5.773476425e-11, No Iterations 1
+ExecutionTime = 0.46809 s  ClockTime = 0 s
+
+ Time = 4800
+Courant number mean: 0.0165782203 max: 0.02739277888
+Gravity wave Courant number max: 0.4596762553
+GAMG:  Solving for Ux, Initial residual = 0.005729473423, Final residual = 3.180361576e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005689348826, Final residual = 5.376311512e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9095385437, Final residual = 5.415880059e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001095814153, Final residual = 4.481196349e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005467953005, Final residual = 6.51497638e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005329457519, Final residual = 6.863676172e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.9055031327, Final residual = 8.137279071e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 4.006686324e-07, Final residual = 5.370417081e-11, No Iterations 1
+ExecutionTime = 0.496613 s  ClockTime = 0 s
+
+ Time = 5100
+Courant number mean: 0.01657821928 max: 0.02739601983
+Gravity wave Courant number max: 0.4596760859
+GAMG:  Solving for Ux, Initial residual = 0.005730027698, Final residual = 3.715434128e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005689744606, Final residual = 6.160303774e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.8965759937, Final residual = 6.384647066e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001112254173, Final residual = 4.376503171e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005467887888, Final residual = 7.373516095e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005330078184, Final residual = 7.869139159e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.8927804196, Final residual = 9.292051524e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 4.034477065e-07, Final residual = 5.040011444e-11, No Iterations 1
+ExecutionTime = 0.526447 s  ClockTime = 0 s
+
+ Time = 5400
+Courant number mean: 0.0165782199 max: 0.0273996761
+Gravity wave Courant number max: 0.4596751999
+GAMG:  Solving for Ux, Initial residual = 0.005730566402, Final residual = 4.285805298e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005690162093, Final residual = 7.009509765e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.8835086415, Final residual = 7.434282006e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.000121901862, Final residual = 4.21724655e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005467165562, Final residual = 8.184965513e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005330729091, Final residual = 8.90414019e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.8799981439, Final residual = 1.041501223e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 4.263373874e-07, Final residual = 4.785773776e-11, No Iterations 1
+ExecutionTime = 0.559425 s  ClockTime = 0 s
+
+ Time = 5700
+Courant number mean: 0.01657822222 max: 0.02740360735
+Gravity wave Courant number max: 0.4596736624
+GAMG:  Solving for Ux, Initial residual = 0.005731066083, Final residual = 4.876969744e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005690595535, Final residual = 7.908783511e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.8703383701, Final residual = 8.558522669e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001321298289, Final residual = 4.030688659e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005465487399, Final residual = 8.853189068e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.00533141409, Final residual = 9.92243878e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.8671482659, Final residual = 1.145635932e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 4.620895846e-07, Final residual = 4.633337233e-11, No Iterations 1
+ExecutionTime = 0.587421 s  ClockTime = 0 s
+
+ Time = 6000
+Courant number mean: 0.01657822628 max: 0.0274077001
+Gravity wave Courant number max: 0.4596715652
+GAMG:  Solving for Ux, Initial residual = 0.005731520805, Final residual = 5.497779307e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005691045176, Final residual = 8.846879175e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.8573217901, Final residual = 9.739723846e-11, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001412061027, Final residual = 3.804756866e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005463129406, Final residual = 9.490249517e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005332134938, Final residual = 1.093197576e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.8544332799, Final residual = 1.237266565e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 5.037905141e-07, Final residual = 4.700625873e-11, No Iterations 1
+ExecutionTime = 0.614791 s  ClockTime = 0 s
+
+ Time = 6300
+Courant number mean: 0.01657823213 max: 0.02741187484
+Gravity wave Courant number max: 0.4596690216
+GAMG:  Solving for Ux, Initial residual = 0.005731919476, Final residual = 6.165095838e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.00569150939, Final residual = 9.815851266e-13, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.8443830345, Final residual = 1.095395726e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001491971466, Final residual = 3.56317955e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005460406792, Final residual = 9.96676958e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005332889839, Final residual = 1.188631493e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.8418444524, Final residual = 1.313188155e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 5.465928301e-07, Final residual = 4.944488437e-11, No Iterations 1
+ExecutionTime = 0.650459 s  ClockTime = 0 s
+
+ Time = 6600
+Courant number mean: 0.0165782398 max: 0.02741609034
+Gravity wave Courant number max: 0.4596661605
+GAMG:  Solving for Ux, Initial residual = 0.005732246349, Final residual = 6.888213349e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005691991493, Final residual = 1.081790516e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.831649449, Final residual = 1.218123822e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001556878241, Final residual = 3.356449205e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005457586752, Final residual = 1.025097067e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005333670231, Final residual = 1.282917557e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.8295343842, Final residual = 1.375849305e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 5.879022395e-07, Final residual = 5.297038262e-11, No Iterations 1
+ExecutionTime = 0.678032 s  ClockTime = 0 s
+
+ Time = 6900
+Courant number mean: 0.01657824933 max: 0.02742034462
+Gravity wave Courant number max: 0.4596631201
+GAMG:  Solving for Ux, Initial residual = 0.005732494492, Final residual = 7.686904075e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005692489439, Final residual = 1.182274666e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.8193266571, Final residual = 1.340526035e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001609110129, Final residual = 3.201144308e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005454618349, Final residual = 1.046593625e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005334487023, Final residual = 1.372615557e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.8175729466, Final residual = 1.435367025e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 6.230524473e-07, Final residual = 5.646687596e-11, No Iterations 1
+ExecutionTime = 0.70421 s  ClockTime = 0 s
+
+ Time = 7200
+Courant number mean: 0.0165782607 max: 0.02742467238
+Gravity wave Courant number max: 0.4596600416
+GAMG:  Solving for Ux, Initial residual = 0.00573265617, Final residual = 8.570307483e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005692993865, Final residual = 1.281808937e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.8072863288, Final residual = 1.460660646e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001652160218, Final residual = 3.118068207e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005451360856, Final residual = 1.076879346e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005335319015, Final residual = 1.457326317e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.8059405885, Final residual = 1.482486287e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 6.512072206e-07, Final residual = 5.920281678e-11, No Iterations 1
+ExecutionTime = 0.729002 s  ClockTime = 0 s
+
+ Time = 7500
+Courant number mean: 0.01657827387 max: 0.02742913917
+Gravity wave Courant number max: 0.4596570622
+GAMG:  Solving for Ux, Initial residual = 0.005732732004, Final residual = 9.441281717e-13, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005693502289, Final residual = 1.379179277e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7955966773, Final residual = 1.576982679e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001694405735, Final residual = 3.064764894e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005447952579, Final residual = 1.164116233e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005336168652, Final residual = 1.548922623e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7946079003, Final residual = 1.544807284e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 6.719994661e-07, Final residual = 6.101227468e-11, No Iterations 1
+ExecutionTime = 0.76973 s  ClockTime = 0 s
+
+ Time = 7800
+Courant number mean: 0.01657828876 max: 0.02743383246
+Gravity wave Courant number max: 0.4596543091
+GAMG:  Solving for Ux, Initial residual = 0.005732745069, Final residual = 1.030903267e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005694022357, Final residual = 1.47360441e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7842893382, Final residual = 1.688466806e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001747695461, Final residual = 3.004091559e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005444207757, Final residual = 1.302572535e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005337057565, Final residual = 1.641629427e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7836395203, Final residual = 1.606523921e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 6.907899571e-07, Final residual = 6.207940797e-11, No Iterations 1
+ExecutionTime = 0.796921 s  ClockTime = 0 s
+
+ Time = 8100
+Courant number mean: 0.01657830526 max: 0.02743885044
+Gravity wave Courant number max: 0.4596518942
+GAMG:  Solving for Ux, Initial residual = 0.005732680514, Final residual = 1.115813122e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005694544838, Final residual = 1.564125585e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7733515539, Final residual = 1.795356794e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001801087796, Final residual = 2.940748237e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005441048849, Final residual = 1.426117544e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005337959081, Final residual = 1.749753649e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.773121011, Final residual = 1.677821027e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 7.057088359e-07, Final residual = 6.226838945e-11, No Iterations 1
+ExecutionTime = 0.82404 s  ClockTime = 0 s
+
+ Time = 8400
+Courant number mean: 0.01657832318 max: 0.02744428916
+Gravity wave Courant number max: 0.4596499092
+GAMG:  Solving for Ux, Initial residual = 0.005732518093, Final residual = 1.202820538e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005695076475, Final residual = 1.651167758e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7627775657, Final residual = 1.895890933e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001848454563, Final residual = 2.854044169e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.00543848188, Final residual = 1.558120937e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005338874666, Final residual = 1.84265561e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7629600189, Final residual = 1.753709457e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 7.148956915e-07, Final residual = 6.139910759e-11, No Iterations 1
+ExecutionTime = 0.85305 s  ClockTime = 0 s
+
+ Time = 8700
+Courant number mean: 0.01657834232 max: 0.02745022926
+Gravity wave Courant number max: 0.4596484225
+GAMG:  Solving for Ux, Initial residual = 0.005732280985, Final residual = 1.29369366e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005695598813, Final residual = 1.733015756e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7526036648, Final residual = 1.991218692e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001891978717, Final residual = 2.741482898e-12, No Iterations 2
+GAMG:  Solving for Ux, Initial residual = 0.005436525642, Final residual = 1.700107762e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005339774018, Final residual = 1.922737516e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7531612208, Final residual = 1.824293039e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 7.180868349e-07, Final residual = 5.990767477e-11, No Iterations 1
+ExecutionTime = 0.895979 s  ClockTime = 0 s
+
+ Time = 9000
+Courant number mean: 0.0165783624 max: 0.02745672305
+Gravity wave Courant number max: 0.4596474763
+GAMG:  Solving for Ux, Initial residual = 0.005731932269, Final residual = 1.385527694e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005696098687, Final residual = 1.809811464e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7428610898, Final residual = 2.080173757e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001929154605, Final residual = 9.784994676e-09, No Iterations 1
+GAMG:  Solving for Ux, Initial residual = 0.00543455541, Final residual = 1.793498521e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005340653357, Final residual = 1.990190378e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7437466666, Final residual = 1.884261398e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 7.208550345e-07, Final residual = 5.879173719e-11, No Iterations 1
+ExecutionTime = 0.922716 s  ClockTime = 0 s
+
+ Time = 9300
+Courant number mean: 0.01657838312 max: 0.02746378321
+Gravity wave Courant number max: 0.4596470861
+GAMG:  Solving for Ux, Initial residual = 0.005731494078, Final residual = 1.477648308e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.00569658468, Final residual = 1.881210481e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7334142543, Final residual = 2.161850371e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001961798408, Final residual = 9.31329275e-09, No Iterations 1
+GAMG:  Solving for Ux, Initial residual = 0.005432617953, Final residual = 1.834425254e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005341513819, Final residual = 2.03858083e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7346323788, Final residual = 1.927562656e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 7.177482017e-07, Final residual = 5.651236641e-11, No Iterations 1
+ExecutionTime = 0.949057 s  ClockTime = 1 s
+
+ Time = 9600
+Courant number mean: 0.01657840413 max: 0.02747137384
+Gravity wave Courant number max: 0.4596472407
+GAMG:  Solving for Ux, Initial residual = 0.005730936546, Final residual = 1.568014573e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005697060365, Final residual = 1.947087349e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7243420176, Final residual = 2.237756019e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0001988386407, Final residual = 8.951133895e-09, No Iterations 1
+GAMG:  Solving for Ux, Initial residual = 0.005430935232, Final residual = 1.828301163e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005342406736, Final residual = 2.063197226e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7258803071, Final residual = 1.95688606e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 7.105372394e-07, Final residual = 5.404715711e-11, No Iterations 1
+ExecutionTime = 0.976861 s  ClockTime = 1 s
+
+ Time = 9900
+Courant number mean: 0.01657842506 max: 0.02747940484
+Gravity wave Courant number max: 0.4596479039
+GAMG:  Solving for Ux, Initial residual = 0.005730291861, Final residual = 1.656464296e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005697538993, Final residual = 2.007486672e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7156794919, Final residual = 2.306263466e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.00020132725, Final residual = 8.815362334e-09, No Iterations 1
+GAMG:  Solving for Ux, Initial residual = 0.005430194742, Final residual = 1.789363272e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005343280388, Final residual = 2.078765862e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7175375594, Final residual = 1.975865549e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 6.992691141e-07, Final residual = 5.227769801e-11, No Iterations 1
+ExecutionTime = 1.018557 s  ClockTime = 1 s
+
+ Time = 10200
+Courant number mean: 0.01657844553 max: 0.02748773008
+Gravity wave Courant number max: 0.4596490168
+GAMG:  Solving for Ux, Initial residual = 0.00572955065, Final residual = 1.752795378e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.00569801528, Final residual = 2.062645372e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7073262304, Final residual = 2.36684923e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0002036400796, Final residual = 9.009622501e-09, No Iterations 1
+GAMG:  Solving for Ux, Initial residual = 0.005429508069, Final residual = 1.742474979e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005344156717, Final residual = 2.081338864e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7094575409, Final residual = 1.981610176e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 6.863053779e-07, Final residual = 5.062852016e-11, No Iterations 1
+ExecutionTime = 1.045438 s  ClockTime = 1 s
+
+ Time = 10500
+Courant number mean: 0.01657846514 max: 0.02749614976
+Gravity wave Courant number max: 0.459650502
+GAMG:  Solving for Ux, Initial residual = 0.005728750528, Final residual = 1.846783296e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005698493514, Final residual = 2.112718311e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.6992366642, Final residual = 2.420627218e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0002053054169, Final residual = 9.265648375e-09, No Iterations 1
+GAMG:  Solving for Ux, Initial residual = 0.005429421967, Final residual = 1.736075312e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005345042376, Final residual = 2.072245883e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.7016123561, Final residual = 1.979475259e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 6.708985107e-07, Final residual = 5.004361354e-11, No Iterations 1
+ExecutionTime = 1.07147 s  ClockTime = 1 s
+
+ Time = 10800
+Courant number mean: 0.01657848349 max: 0.02750441686
+Gravity wave Courant number max: 0.4596522675
+GAMG:  Solving for Ux, Initial residual = 0.005727893041, Final residual = 1.933232206e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005698976319, Final residual = 2.15713191e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.6914179071, Final residual = 2.466790533e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 0.0002065578184, Final residual = 9.462451491e-09, No Iterations 1
+GAMG:  Solving for Ux, Initial residual = 0.005429521164, Final residual = 1.749615836e-12, No Iterations 1
+GAMG:  Solving for Uy, Initial residual = 0.005345902445, Final residual = 2.062270553e-12, No Iterations 1
+GAMG:  Solving for Uz, Initial residual = 0.6940100804, Final residual = 1.977437752e-10, No Iterations 1
+GAMG:  Solving for h, Initial residual = 6.593389202e-07, Final residual = 5.128403187e-11, No Iterations 1
+ExecutionTime = 1.099296 s  ClockTime = 1 s
+End
