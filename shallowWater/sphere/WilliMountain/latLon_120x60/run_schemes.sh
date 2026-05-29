@@ -29,7 +29,7 @@ for i in {1,2,3}
 do
     for time in ${intervals[@]};
     do
-        rm run_scheme_$i/dt_$time/*
+        #rm run_scheme_$i/dt_$time/*
         for dt in ${time_steps_1[@]};
         do
             cp run_scheme_$i/dt_$dt/$time/h run_scheme_$i/$time/h_$dt
@@ -62,8 +62,8 @@ E2=float($dt_2)
 print(log(E1/E2)/log(${time_steps[$j1]}/${time_steps[$j]}))
 EOF
 )
-            (cd run_scheme_$i ; echo $hrs $j $result >> errors)
-            echo "scheme = " $i " and j = " $j " at " $hrs " hours has order " $result 
+            (cd run_scheme_$i ; echo $hrs ${time_steps[$j1]}" to "${time_steps[$j]} $result >> errors)
+            echo "scheme = " $i " and ratio "${time_steps[$j1]}" to "${time_steps[$j]}" at " $hrs " hours has order " $result 
         done
     done
 done
