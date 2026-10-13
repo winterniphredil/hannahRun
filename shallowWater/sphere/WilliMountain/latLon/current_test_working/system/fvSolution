@@ -1,0 +1,74 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// for SplitNewton scheme
+nItsAdv1 2;
+nItsAdv2 2;
+nItsGrav 2;
+
+// for segregated scheme
+nOuterCorrs 3;
+nPressureCorrs 2;
+nOrthogCorrs 2;
+nNonOrthogCorrs 2;
+timeOffCentre 0.5;
+operatorSplit off;
+
+solvers
+{
+    "h"
+    {
+        solver          GAMG;
+        smoother        GaussSeidel;
+        tolerance       1e-09;
+        relTol          0;
+    }
+}
+
+solvers
+{
+    "h_prime"
+    {
+        solver          GAMG;
+        smoother        GaussSeidel;
+        tolerance       1e-09;
+        relTol          0;
+    }
+}
+
+solvers
+{
+    "U"
+    {
+        solver          GAMG;
+        smoother        GaussSeidel;
+        tolerance       1e-09;
+        relTol          0;
+    }
+}
+
+solvers
+{
+    "U_prime"
+    {
+        solver          GAMG;
+        smoother        GaussSeidel;
+        tolerance       1e-09;
+        relTol          0;
+    }
+}
+
+// ************************************************************************* //

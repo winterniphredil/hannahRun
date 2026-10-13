@@ -1,0 +1,338 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  14
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 14-7b05503f98a8
+Exec   : sumFields 1296000 hTotal 1296000 h constant h0
+Date   : Oct 13 2026
+Time   : 17:43:53
+Host   : "uorc104p34"
+PID    : 596583
+I/O    : uncollated
+Case   : /home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0 region "region0"
+Writing 1296000/"hTotal"
+Min = 5032.31710522 in cell 3556 max = 5947.86759621 in cell 49317
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  14
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 14-7b05503f98a8
+Exec   : writeCellDataLatLon -constant h0
+Date   : Oct 13 2026
+Time   : 17:43:54
+Host   : "uorc104p34"
+PID    : 596585
+I/O    : uncollated
+Case   : /home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = constant
+
+Time = constant
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/constant/h0.latLon"
+Time = 0
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/0/h0.latLon"
+No h0
+Time = 18000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/18000/h0.latLon"
+No h0
+Time = 36000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/36000/h0.latLon"
+No h0
+Time = 54000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/54000/h0.latLon"
+No h0
+Time = 72000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/72000/h0.latLon"
+No h0
+Time = 90000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/90000/h0.latLon"
+No h0
+Time = 108000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/108000/h0.latLon"
+No h0
+Time = 126000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/126000/h0.latLon"
+No h0
+Time = 144000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/144000/h0.latLon"
+No h0
+Time = 162000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/162000/h0.latLon"
+No h0
+Time = 180000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/180000/h0.latLon"
+No h0
+Time = 198000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/198000/h0.latLon"
+No h0
+Time = 216000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/216000/h0.latLon"
+No h0
+Time = 234000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/234000/h0.latLon"
+No h0
+Time = 252000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/252000/h0.latLon"
+No h0
+Time = 270000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/270000/h0.latLon"
+No h0
+Time = 288000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/288000/h0.latLon"
+No h0
+Time = 306000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/306000/h0.latLon"
+No h0
+Time = 324000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/324000/h0.latLon"
+No h0
+Time = 342000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/342000/h0.latLon"
+No h0
+Time = 360000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/360000/h0.latLon"
+No h0
+Time = 378000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/378000/h0.latLon"
+No h0
+Time = 396000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/396000/h0.latLon"
+No h0
+Time = 414000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/414000/h0.latLon"
+No h0
+Time = 432000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/432000/h0.latLon"
+No h0
+Time = 450000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/450000/h0.latLon"
+No h0
+Time = 468000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/468000/h0.latLon"
+No h0
+Time = 486000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/486000/h0.latLon"
+No h0
+Time = 504000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/504000/h0.latLon"
+No h0
+Time = 522000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/522000/h0.latLon"
+No h0
+Time = 540000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/540000/h0.latLon"
+No h0
+Time = 558000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/558000/h0.latLon"
+No h0
+Time = 576000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/576000/h0.latLon"
+No h0
+Time = 594000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/594000/h0.latLon"
+No h0
+Time = 612000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/612000/h0.latLon"
+No h0
+Time = 630000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/630000/h0.latLon"
+No h0
+Time = 648000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/648000/h0.latLon"
+No h0
+Time = 666000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/666000/h0.latLon"
+No h0
+Time = 684000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/684000/h0.latLon"
+No h0
+Time = 702000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/702000/h0.latLon"
+No h0
+Time = 720000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/720000/h0.latLon"
+No h0
+Time = 738000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/738000/h0.latLon"
+No h0
+Time = 756000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/756000/h0.latLon"
+No h0
+Time = 774000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/774000/h0.latLon"
+No h0
+Time = 792000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/792000/h0.latLon"
+No h0
+Time = 810000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/810000/h0.latLon"
+No h0
+Time = 828000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/828000/h0.latLon"
+No h0
+Time = 846000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/846000/h0.latLon"
+No h0
+Time = 864000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/864000/h0.latLon"
+No h0
+Time = 882000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/882000/h0.latLon"
+No h0
+Time = 900000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/900000/h0.latLon"
+No h0
+Time = 918000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/918000/h0.latLon"
+No h0
+Time = 936000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/936000/h0.latLon"
+No h0
+Time = 954000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/954000/h0.latLon"
+No h0
+Time = 972000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/972000/h0.latLon"
+No h0
+Time = 990000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/990000/h0.latLon"
+No h0
+Time = 1008000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1008000/h0.latLon"
+No h0
+Time = 1026000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1026000/h0.latLon"
+No h0
+Time = 1044000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1044000/h0.latLon"
+No h0
+Time = 1062000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1062000/h0.latLon"
+No h0
+Time = 1080000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1080000/h0.latLon"
+No h0
+Time = 1098000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1098000/h0.latLon"
+No h0
+Time = 1116000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1116000/h0.latLon"
+No h0
+Time = 1134000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1134000/h0.latLon"
+No h0
+Time = 1152000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1152000/h0.latLon"
+No h0
+Time = 1170000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1170000/h0.latLon"
+No h0
+Time = 1188000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1188000/h0.latLon"
+No h0
+Time = 1206000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1206000/h0.latLon"
+No h0
+Time = 1224000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1224000/h0.latLon"
+No h0
+Time = 1242000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1242000/h0.latLon"
+No h0
+Time = 1260000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1260000/h0.latLon"
+No h0
+Time = 1278000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1278000/h0.latLon"
+No h0
+Time = 1296000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1296000/h0.latLon"
+No h0
+
+ end 
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  14
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 14-7b05503f98a8
+Exec   : writeCellDataLatLon -time 1296000 hTotal
+Date   : Oct 13 2026
+Time   : 17:43:54
+Host   : "uorc104p34"
+PID    : 596587
+I/O    : uncollated
+Case   : /home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 1296000
+
+Time = 1296000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1296000/hTotal.latLon"
+
+ end 
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  14
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 14-7b05503f98a8
+Exec   : writeCellDataLatLon -time 1296000 U
+Date   : Oct 13 2026
+Time   : 17:43:54
+Host   : "uorc104p34"
+PID    : 596589
+I/O    : uncollated
+Case   : /home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 1296000
+
+Time = 1296000
+Writing file "/home/mq804938/OpenFOAM/mq804938-13/run/hilaryRun2_apr_26/shallowWater/sphere/WilliMountain/latLon/current_test_working/1296000/U.latLon"
+
+ end 
+Input files: 1296000/hU.ps
+Processing: 1296000/hU.ps
+Rendering with existing %%BoundingBox: 0 0 595 842
+Calculating Bounding Box...ready. %%BoundingBox: 212 37 542 617
+Creating output file 1296000/hU.eps ... ready.
