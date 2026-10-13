@@ -1,0 +1,50 @@
+#!/bin/bash -e
+
+if [ "$#" -ne 1 ]; then
+   echo usage: plothU time
+   exit
+fi
+time=$1
+outFile=$time/diff
+echo plotting $outFile.eps.gz. Errors going to plotting/plothU.out
+
+# Write out the data in lat-lon co-ordinates
+#sumFields $time hTotal $time h constant h0 > plotting/plothU.out
+sumFields $time hTotalDiff $time h $time h_split -scale1 -1 > plotting/plothU.out
+writeCellDataLatLon -constant h0 >> plotting/plothU.out
+writeCellDataLatLon -time $time hTotalDiff >> plotting/plothU.out
+
+gmt info constant/h0.latLon
+gmt info $time/hTotalDiff.latLon
+
+# Set up the plot
+gmt psbasemap -R0/360/-90/90 -JQ0/18c -B60/60 -K > $outFile.ps
+
+# Create colours for the total height and plot
+gmt makecpt -Cjet -D -T-40/40/5 > plotting/hcontours.cpt
+#gmt makecpt -Cjet -D -T-2050/2050/100 > plotting/hcontours.cpt
+gmt pscontour $time/hTotalDiff.latLon -R0/360/-90/90 -JQ0/18c \
+    -Cplotting/hcontours.cpt -A- -I -h1 -K -O >> $outFile.ps
+
+# Create contours for the mountain and plot
+gmt makecpt -N -T100/2100/200 > plotting/h0contours.cpt
+gmt pscontour constant/h0.latLon -R0/360/-90/90 -JQ0/18c \
+    -Cplotting/h0contours.cpt -A- -W -h1 -K -O >> $outFile.ps
+
+
+# Add scale to plot
+gmt psclip -C -O -K >> $outFile.ps
+gmt psscale -Cplotting/hcontours.cpt -DJTC+w5c/0.1c+h+o0c/1c -R0/360/-90/90 -JQ0/18c -Bxaf+l"total height difference, h(seg) - h(split)" -O >> $outFile.ps
+
+rm constant/*.latLon* $time/*.latLon*
+
+# Finalise the plot
+#gmt psbasemap -R -J -B60/60 -O >> $outFile.ps
+ps2eps -O $outFile.ps >> plotting/plothU.out 2>&1
+convert -flatten -density 300 -rotate 90 $outFile.eps $time/diff_plot.jpg
+gzip -f $outFile.eps
+evince $outFile.eps.gz &
+
+# Tidy up
+rm $outFile.ps
+
